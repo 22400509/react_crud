@@ -6,7 +6,7 @@ const EmpEdit = () => {
   //const [empdata, setEmpdata] = useState({});
 
   useEffect(() => {
-    fetch("http://localhost:8000/employee/" + empid)
+    fetch("https://68db342a23ebc87faa3244f6.mockapi.io/employee/" + empid)
       .then((res) => {
         return res.json();
       })
@@ -33,7 +33,7 @@ const EmpEdit = () => {
     e.preventDefault();
     const empdata = { id, name, email, phone, active };
 
-    fetch("http://localhost:8000/employee/" + empid, {
+    fetch("https://68db342a23ebc87faa3244f6.mockapi.io/employee/" + empid, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(empdata),
@@ -55,7 +55,7 @@ const EmpEdit = () => {
               <div className="card-title">
                 <h2>Employee Edit</h2>
               </div>
-              <div className="card-body">
+              <div className="card-body1">
                 <div className="row">
                   <div className="col-lg-12">
                     <div className="form-group">

@@ -6,7 +6,7 @@ const EmpDetail = () => {
   const [empdata, setEmpdata] = useState({});
 
   useEffect(() => {
-    fetch("http://localhost:8000/employee/" + empid)
+    fetch("https://68db342a23ebc87faa3244f6.mockapi.io/employee/" + empid)
       .then((res) => {
         return res.json();
       })
@@ -23,7 +23,7 @@ const EmpDetail = () => {
         <div className="card-title">
           <h2>Employee Create</h2>
         </div>
-        <div className="card-body"></div>
+        <div className="card-body1"></div>
         {empdata && (
           <div>
             <h2>
