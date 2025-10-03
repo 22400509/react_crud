@@ -21,7 +21,7 @@ const EmpDetail = () => {
     <div>
       <div className="card" style={{ textAlign: "left" }}>
         <div className="card-title">
-          <h2>Employee Create</h2>
+          <h2 id="detaill">Employee Details</h2>
         </div>
         <div className="card-body1"></div>
         {empdata && (
@@ -30,6 +30,12 @@ const EmpDetail = () => {
               The Employee name is : <b>{empdata.name}</b> ({empdata.id})
             </h2>
             <h3>Contact Details</h3>
+            <h5>
+              Gender is : <b>{empdata.gender}</b>
+            </h5>
+            <h5>
+              Address is : <b>{empdata.address}</b>
+            </h5>
             <h5>
               Email is : <b>{empdata.email}</b>
             </h5>

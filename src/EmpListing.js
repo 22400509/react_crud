@@ -57,6 +57,7 @@ const EmpListing = () => {
                 <td>ID</td>
                 <td>Name</td>
                 <td>Gender</td>
+                <td>Address</td>
                 <td>Email</td>
                 <td>Phone</td>
                 <td>Action</td>
@@ -69,6 +70,7 @@ const EmpListing = () => {
                     <td>{item.id}</td>
                     <td>{item.name}</td>
                     <td>{item.gender}</td>
+                    <td>{item.address}</td>
                     <td>{item.email}</td>
                     <td>{item.phone}</td>
                     <td>

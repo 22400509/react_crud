@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 const EmpCreate = () => {
   const [id, setId] = useState("");
   const [name, setName] = useState("");
+  const [gender, setGender] = useState("");
+  const [address, setAddress] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [active, setActive] = useState(true);
@@ -12,7 +14,7 @@ const EmpCreate = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const empdata = { id, name, email, phone, active };
+    const empdata = { id, name, gender, address, email, phone, active };
 
     fetch("https://68db342a23ebc87faa3244f6.mockapi.io/employee", {
       method: "POST",
@@ -35,7 +37,7 @@ const EmpCreate = () => {
           <form className="container" onSubmit={handleSubmit}>
             <div className="card" style={{ textAlign: "left" }}>
               <div className="card-title">
-                <h2>Employee Create</h2>
+                <h2 id="creatt">Employee Create</h2>
               </div>
               <div className="card-body1">
                 <div className="row">
@@ -62,6 +64,26 @@ const EmpCreate = () => {
                       {name.length === 0 && validation && (
                         <span className="text-danger">Enter the name</span>
                       )}
+                    </div>
+                  </div>
+                  <div className="col-lg-12">
+                    <div className="form-group">
+                      <label>Gender</label>
+                      <input
+                        value={gender}
+                        onChange={(e) => setGender(e.target.value)}
+                        className="form-control"
+                      ></input>
+                    </div>
+                  </div>
+                  <div className="col-lg-12">
+                    <div className="form-group">
+                      <label>address</label>
+                      <input
+                        value={address}
+                        onChange={(e) => setAddress(e.target.value)}
+                        className="form-control"
+                      ></input>
                     </div>
                   </div>
                   <div className="col-lg-12">

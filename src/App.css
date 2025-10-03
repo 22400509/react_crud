@@ -12,6 +12,38 @@ h1{
   border: rgb(207, 255, 207) solid 3px;
 }
 
+#creatt{
+  background-color: rgb(137, 255, 137);
+  display: inline-block;
+  border-radius: 15px;
+  padding: 10px;
+  border: rgb(105, 248, 105) solid 3px;
+  margin-top: 10px;
+}
+
+#editt{
+  background-color: rgb(255, 137, 137);
+  display: inline-block;
+  border-radius: 15px;
+  padding: 10px;
+  border: rgb(248, 105, 105) solid 3px;
+  margin-top: 10px;
+}
+
+#detaill{
+  background-color: rgb(173, 151, 250);
+  display: inline-block;
+  border-radius: 15px;
+  padding: 10px;
+  border: rgb(159, 49, 255) solid 3px;
+  margin-top: 10px;
+}
+.card-title{
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(246, 251, 160);
+}
+
 .divbtn{
   border: rgb(255, 255, 255) solid 1px;
   border-radius: 3px;

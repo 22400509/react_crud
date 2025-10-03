@@ -13,6 +13,8 @@ const EmpEdit = () => {
       .then((resp) => {
         setId(resp.id);
         setName(resp.name);
+        setGender(resp.gender);
+        setAddress(resp.address);
         setEmail(resp.email);
         setPhone(resp.phone);
         setActive(resp.active);
@@ -23,6 +25,8 @@ const EmpEdit = () => {
   }, []);
   const [id, setId] = useState("");
   const [name, setName] = useState("");
+  const [gender, setGender] = useState("");
+  const [address, setAddress] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [active, setActive] = useState(true);
@@ -31,7 +35,7 @@ const EmpEdit = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const empdata = { id, name, email, phone, active };
+    const empdata = { id, name, gender, address, email, phone, active };
 
     fetch("https://68db342a23ebc87faa3244f6.mockapi.io/employee/" + empid, {
       method: "PUT",
@@ -53,7 +57,7 @@ const EmpEdit = () => {
           <form className="container" onSubmit={handleSubmit}>
             <div className="card" style={{ textAlign: "left" }}>
               <div className="card-title">
-                <h2>Employee Edit</h2>
+                <h2 id="editt">Employee Edit</h2>
               </div>
               <div className="card-body1">
                 <div className="row">
@@ -80,6 +84,26 @@ const EmpEdit = () => {
                       {name.length === 0 && validation && (
                         <span className="text-danger">Enter the name</span>
                       )}
+                    </div>
+                  </div>
+                  <div className="col-lg-12">
+                    <div className="form-group">
+                      <label>Gender</label>
+                      <input
+                        value={gender}
+                        onChange={(e) => setGender(e.target.value)}
+                        className="form-control"
+                      ></input>
+                    </div>
+                  </div>
+                  <div className="col-lg-12">
+                    <div className="form-group">
+                      <label>Address</label>
+                      <input
+                        value={address}
+                        onChange={(e) => setAddress(e.target.value)}
+                        className="form-control"
+                      ></input>
                     </div>
                   </div>
                   <div className="col-lg-12">
